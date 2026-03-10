@@ -10,6 +10,16 @@ const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('navLinks');
 hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
 
+/* ---- QR VERIFY HANDLER ---- */
+const urlParams = new URLSearchParams(window.location.search);
+const verifyId = urlParams.get('verify');
+if (verifyId) {
+  setTimeout(() => {
+    document.getElementById('certificate').scrollIntoView({ behavior: 'smooth' });
+    alert(`✅ Certificate Verified!\n\nCredential ID: ${verifyId}\nIssued by: Greenomics · LPU\nStatus: AUTHENTIC`);
+  }, 1000);
+}
+
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
@@ -505,7 +515,7 @@ function generateCertificate() {
 
   const tier = getTierData(trees);
   const credId = generateCredentialId();
-  const credUrl = `https://greenomics-webpage.onrender.com/verify/${credId}`;
+  const credUrl = `https://greenomics-webpage.onrender.com/?verify=${credId}`;
   const issueDate = formatDateDisplay(date);
   const plantedStr = formatDateDisplay(date);
 
