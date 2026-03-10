@@ -505,7 +505,7 @@ function generateCertificate() {
 
   const tier = getTierData(trees);
   const credId = generateCredentialId();
-  const credUrl = `https://greenomics.lpu.in/verify/${credId}`;
+  const credUrl = `https://greenomics-webpage.onrender.com/verify/${credId}`;
   const issueDate = formatDateDisplay(date);
   const plantedStr = formatDateDisplay(date);
 
