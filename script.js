@@ -3,6 +3,53 @@
    © 2026 Greenomics. All Rights Reserved.
    ============================================= */
 
+/* ---- INJECT VERIFY BANNER STYLES ---- */
+(function(){
+  const s = document.createElement('style');
+  s.textContent = `
+    #verifyBanner {
+      position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      z-index: 9999; width: min(480px, 94vw);
+      background: linear-gradient(135deg, #0f2010, #1a3c1a);
+      border: 2px solid #5cb85c;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(92,184,92,0.4), 0 0 0 1px rgba(92,184,92,0.15);
+      animation: verifySlideUp 0.5s cubic-bezier(.22,1,.36,1) both;
+    }
+    @keyframes verifySlideUp {
+      from { opacity:0; transform: translateX(-50%) translateY(30px); }
+      to   { opacity:1; transform: translateX(-50%) translateY(0); }
+    }
+    .verify-inner {
+      display: flex; align-items: flex-start; gap: 1rem; padding: 1.4rem 1.6rem;
+    }
+    .verify-icon { font-size: 2.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .verify-text { flex: 1; }
+    .verify-title {
+      font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700;
+      color: #d4a017; margin-bottom: 0.8rem; letter-spacing: 0.02em;
+    }
+    .verify-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.3rem 0; border-bottom: 1px solid rgba(92,184,92,0.15);
+      font-size: 0.88rem;
+    }
+    .verify-row:last-child { border-bottom: none; }
+    .vl { color: rgba(255,255,255,0.55); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; }
+    .vv { color: rgba(255,255,255,0.92); font-weight: 700; font-size: 0.85rem; }
+    .verify-authentic { color: #5cb85c !important; letter-spacing: 0.08em; }
+    .verify-close {
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.6); border-radius: 50%; width: 28px; height: 28px;
+      cursor: pointer; font-size: 0.8rem; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s; margin-top: 0.1rem;
+    }
+    .verify-close:hover { background: rgba(217,83,79,0.3); color: white; border-color: #d9534f; }
+  `;
+  document.head.appendChild(s);
+})();
+
 /* ============================================================
    NAVBAR
    ============================================================ */
@@ -12,12 +59,43 @@ hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
 
 /* ---- QR VERIFY HANDLER ---- */
 const urlParams = new URLSearchParams(window.location.search);
-const verifyId = urlParams.get('verify');
-if (verifyId) {
-  setTimeout(() => {
-    document.getElementById('certificate').scrollIntoView({ behavior: 'smooth' });
-    alert(`✅ Certificate Verified!\n\nCredential ID: ${verifyId}\nIssued by: Greenomics · LPU\nStatus: AUTHENTIC`);
-  }, 1000);
+const verifyParam = urlParams.get('verify');
+if (verifyParam) {
+  window.addEventListener('DOMContentLoaded', () => {
+    try {
+      const d = JSON.parse(atob(verifyParam));
+      // Pre-fill and generate the certificate silently
+      document.getElementById('certName').value  = d.name;
+      document.getElementById('certAge').value   = d.age;
+      document.getElementById('certGender').value = d.gender;
+      document.getElementById('certTrees').value = d.trees;
+      document.getElementById('certDate').value  = d.date;
+      document.getElementById('certState').value = d.state;
+      // Trigger certificate generation
+      generateCertificate();
+      // Show styled verification banner
+      const banner = document.createElement('div');
+      banner.id = 'verifyBanner';
+      banner.innerHTML = `
+        <div class="verify-inner">
+          <div class="verify-icon">✅</div>
+          <div class="verify-text">
+            <div class="verify-title">Certificate Verified!</div>
+            <div class="verify-row"><span class="vl">Credential ID</span><span class="vv">${d.id}</span></div>
+            <div class="verify-row"><span class="vl">Issued by</span><span class="vv">Greenomics · LPU</span></div>
+            <div class="verify-row"><span class="vl">Status</span><span class="vv verify-authentic">✔ AUTHENTIC</span></div>
+          </div>
+          <button class="verify-close" onclick="document.getElementById('verifyBanner').remove()">✕</button>
+        </div>`;
+      document.body.appendChild(banner);
+      // Scroll to certificate
+      setTimeout(() => {
+        document.getElementById('certificate').scrollIntoView({ behavior: 'smooth' });
+      }, 600);
+    } catch(e) {
+      console.warn('Invalid verify param');
+    }
+  });
 }
 
 // Navbar scroll effect
@@ -515,7 +593,13 @@ function generateCertificate() {
 
   const tier = getTierData(trees);
   const credId = generateCredentialId();
-  const credUrl = `https://greenomics-webpage.onrender.com/?verify=${credId}`;
+  // Encode all cert data into the URL so scanning shows full certificate
+  const certData = btoa(JSON.stringify({
+    id: credId,
+    name, age, gender, trees, date, state,
+    tier: tier.name, emoji: tier.emoji
+  }));
+  const credUrl = `https://greenomics-webpage.onrender.com/?verify=${certData}`;
   const issueDate = formatDateDisplay(date);
   const plantedStr = formatDateDisplay(date);
 
