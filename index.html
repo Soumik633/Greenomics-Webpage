@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Greenomics – Deforestation & Economy</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&family=Cinzel:wght@600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-brand"><span class="leaf-icon">🌿</span><span class="brand-text">Greenomics</span></div>
+  <button class="hamburger" id="hamburger">&#9776;</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero"><span class="nav-icon"></span>Home</a></li>
+    <li><a href="#payeng-story"><span class="nav-icon"></span>Story</a></li>
+    <li><a href="#about"><span class="nav-icon"></span>About</a></li>
+    <li><a href="#effects"><span class="nav-icon"></span>Effects</a></li>
+    <li><a href="#india-map"><span class="nav-icon"></span>Ind Map</a></li>
+    <li><a href="#live-counter"><span class="nav-icon"></span>Live Stats</a></li>
+    <li><a href="#awareness"><span class="nav-icon"></span>Awareness</a></li>
+    <li><a href="#govt-schemes"><span class="nav-icon"></span>Govt Schemes</a></li>
+    <li><a href="#un-goals"><span class="nav-icon"></span>UN Goals</a></li>
+    <li><a href="#game"><span class="nav-icon"></span>Game</a></li>
+    <li><a href="#certificate"><span class="nav-icon"></span>Certificate</a></li>
+    <li><a href="#project"><span class="nav-icon"></span>Project</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Environmental Studies · LPU · Greenomics</p>
+    <h1 class="hero-title">Deforestation<br><span class="hero-accent">&amp; Its Economic Impact</span></h1>
+    <p class="hero-sub">Every year, 15 billion trees are cut down. The cost is not just ecological — it's economic, social, and civilizational.</p>
+    <div class="hero-btns">
+      <a href="#about" class="cta-btn primary-btn">Explore Now ↓</a>
+      <a href="#certificate" class="cta-btn secondary-btn">Get Certificate 🏆</a>
+    </div>
+  </div>
+  <div class="hero-stats-ribbon">
+    <div class="rib-stat"><span class="rib-num">15B</span><span class="rib-label">Trees Cut Yearly</span></div>
+    <div class="rib-stat"><span class="rib-num">4.7M</span><span class="rib-label">Hectares Lost/Year</span></div>
+    <div class="rib-stat"><span class="rib-num">80%</span><span class="rib-label">Biodiversity in Forests</span></div>
+    <div class="rib-stat"><span class="rib-num">$2.5T</span><span class="rib-label">Annual Ecosystem Value</span></div>
+  </div>
+  <div class="payeng-badge">
+    <span class="payeng-icon">🌳</span>
+    <div class="payeng-text"><strong>The Forest Man of India</strong><small>Jadav Payeng planted a forest bigger than Central Park, alone.</small></div>
+    <a href="#payeng-story" class="payeng-link">Read →</a>
+  </div>
+</section>
+
+<section id="payeng-story" class="section-dark story-section">
+  <div class="container">
+    <div class="section-badge">🌳 Inspiration</div>
+    <h2 class="section-title">The Forest Man of India</h2>
+    <div class="story-grid">
+      <div class="story-text">
+        <h3 class="story-name">Jadav "Molai" Payeng</h3>
+        <p>Born in 1963 on <strong>Majuli island, Assam</strong> — the world's largest river island — Jadav Payeng witnessed the devastation of his homeland as floods and erosion stripped the island bare.</p>
+        <p>At just <strong>16 years old</strong>, he began planting trees on a barren sandbar. With no training, no funding, and no recognition, he worked for over <strong>40 years</strong> — planting, nurturing, protecting every single day.</p>
+        <p>Today, the forest he created — <strong>Molai Forest</strong> — covers over <strong>1,360 acres (550 hectares)</strong>. It is now home to Bengal tigers, Indian rhinoceros, elephants, deer, and hundreds of bird species.</p>
+        <blockquote class="story-quote">"Forests are our life. Without them, we cannot survive. I am still planting. I will plant till I die."<cite>— Jadav Payeng</cite></blockquote>
+        <div class="story-awards">
+          <span class="award-badge">🏆 Padma Shri 2015</span>
+          <span class="award-badge">🌿 Green Nobel Nominee</span>
+          <span class="award-badge">🎓 JNU Honorary Doctorate</span>
+        </div>
+      </div>
+      <div class="story-visual">
+        <div class="story-stat-card"><div class="bnum">550</div><div class="bunit">Hectares</div><div class="bdesc">Forest grown single-handedly</div></div>
+        <div class="story-stat-card"><div class="bnum">40+</div><div class="bunit">Years</div><div class="bdesc">Of relentless dedication</div></div>
+        <div class="story-stat-card"><div class="bnum">100+</div><div class="bunit">Species</div><div class="bdesc">Wildlife now call it home</div></div>
+        <div class="story-moral">💡 <em>One person CAN change the world. What will YOU plant today?</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section-light">
+  <div class="container">
+    <div class="section-badge">📖 Understanding the Crisis</div>
+    <h2 class="section-title">What Is Deforestation?</h2>
+    <div class="about-grid">
+      <div class="about-card"><div class="about-icon">🪓</div><h3>Definition</h3><p>Deforestation is the large-scale removal of forests, converting forested land to agriculture, urban development, mining, or logging — permanently altering ecosystems.</p></div>
+      <div class="about-card"><div class="about-icon">📊</div><h3>Global Scale</h3><p>The world loses approximately <strong>4.7 million hectares</strong> of forest per year — roughly the area of Denmark, gone every 12 months.</p></div>
+      <div class="about-card"><div class="about-icon">🌏</div><h3>India's Crisis</h3><p>India loses <strong>1.5 lakh hectares</strong> of forest annually. Dense forest is being replaced by degraded open scrubland and mono-crop plantations.</p></div>
+      <div class="about-card"><div class="about-icon">💰</div><h3>Economic Cost</h3><p>Forests provide ecosystem services worth <strong>$2.5 trillion annually</strong>. Their loss cascades into agricultural collapse, water scarcity, and climate liability.</p></div>
+    </div>
+    <div class="ipl-fact-box">
+      <div class="ipl-icon">🏏</div>
+      <div class="ipl-content">
+        <h3>Did You Know? IPL &amp; Deforestation</h3>
+        <p>In IPL cricket, every <strong>dot ball = 100 trees</strong> cut down somewhere in India. A single IPL match has ~240 dot balls — that's <strong>24,000 trees per match</strong>. An IPL season (74 matches) = <strong>17.76 lakh trees</strong>. Next time you watch cricket, think about the forest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="effects" class="section-dark">
+  <div class="container">
+    <div class="section-badge">⚠️ Consequences</div>
+    <h2 class="section-title">Effects of Deforestation</h2>
+    <div class="effects-tabs">
+      <button class="tab-btn active" data-tab="economic">💰 Economic</button>
+      <button class="tab-btn" data-tab="environmental">🌍 Environmental</button>
+      <button class="tab-btn" data-tab="social">👥 Social</button>
+      <button class="tab-btn" data-tab="health">🏥 Health</button>
+    </div>
+    <div class="tab-content active" id="tab-economic">
+      <div class="effects-grid">
+        <div class="effect-card"><div class="eff-icon">📉</div><h4>GDP Loss</h4><p>Countries lose up to 5% of GDP annually from ecosystem degradation caused by deforestation.</p></div>
+        <div class="effect-card"><div class="eff-icon">🌾</div><h4>Agricultural Collapse</h4><p>Soil erosion after deforestation reduces agricultural productivity by 40–60% within a decade.</p></div>
+        <div class="effect-card"><div class="eff-icon">💧</div><h4>Water Economy</h4><p>Deforestation of watersheds costs India ₹3.5 lakh crore annually in water management expenses.</p></div>
+        <div class="effect-card"><div class="eff-icon">🏭</div><h4>Timber Industry Collapse</h4><p>Unsustainable logging destroys the very industry it sustains within 30–50 years.</p></div>
+        <div class="effect-card"><div class="eff-icon">🐘</div><h4>Tourism Revenue Loss</h4><p>India's ecotourism generates ₹50,000 crore annually. Forests are the backbone of this industry.</p></div>
+        <div class="effect-card"><div class="eff-icon">⚡</div><h4>Energy Crisis</h4><p>60% of rural India depends on wood fuel. Deforestation spirals into energy poverty for millions.</p></div>
+      </div>
+    </div>
+    <div class="tab-content" id="tab-environmental">
+      <div class="effects-grid">
+        <div class="effect-card"><div class="eff-icon">🌡️</div><h4>Climate Change</h4><p>Deforestation contributes 10–15% of global greenhouse gas emissions every year.</p></div>
+        <div class="effect-card"><div class="eff-icon">🦁</div><h4>Biodiversity Loss</h4><p>Forests house 80% of terrestrial biodiversity. Their loss triggers irreversible mass extinctions.</p></div>
+        <div class="effect-card"><div class="eff-icon">🌊</div><h4>Floods &amp; Erosion</h4><p>Deforested land absorbs 5x less rainfall, turning moderate rain into catastrophic floods.</p></div>
+        <div class="effect-card"><div class="eff-icon">🏔️</div><h4>Desertification</h4><p>Rajasthan's Thar Desert grows 0.5 km annually due to deforestation in surrounding areas.</p></div>
+        <div class="effect-card"><div class="eff-icon">💨</div><h4>Carbon Release</h4><p>Cutting one mature tree releases carbon equivalent to driving a car 3,500 km.</p></div>
+        <div class="effect-card"><div class="eff-icon">🌧️</div><h4>Rainfall Reduction</h4><p>20% forest loss reduces regional rainfall by up to 30%, triggering drought cycles.</p></div>
+      </div>
+    </div>
+    <div class="tab-content" id="tab-social">
+      <div class="effects-grid">
+        <div class="effect-card"><div class="eff-icon">🏘️</div><h4>Tribal Displacement</h4><p>Over 8 crore tribal people in India directly depend on forests. Deforestation leaves them homeless.</p></div>
+        <div class="effect-card"><div class="eff-icon">👩‍🌾</div><h4>Livelihood Loss</h4><p>Forest-based livelihoods support 27 crore people in India alone.</p></div>
+        <div class="effect-card"><div class="eff-icon">🍽️</div><h4>Food Security</h4><p>Forests provide nutrition, medicine, and food security to millions of marginalised communities.</p></div>
+        <div class="effect-card"><div class="eff-icon">⚔️</div><h4>Resource Conflicts</h4><p>Scarcity of forest resources historically triggers social unrest and armed conflicts globally.</p></div>
+        <div class="effect-card"><div class="eff-icon">🏫</div><h4>Cultural Erasure</h4><p>Indigenous cultures tied to forests vanish completely when their ecosystems disappear.</p></div>
+        <div class="effect-card"><div class="eff-icon">🌍</div><h4>Climate Refugees</h4><p>By 2050, climate-driven deforestation may displace over 1 billion people worldwide.</p></div>
+      </div>
+    </div>
+    <div class="tab-content" id="tab-health">
+      <div class="effects-grid">
+        <div class="effect-card"><div class="eff-icon">🦠</div><h4>Pandemic Risk</h4><p>70% of emerging infectious diseases originate from human-animal interfaces created by deforestation.</p></div>
+        <div class="effect-card"><div class="eff-icon">😷</div><h4>Air Pollution</h4><p>Forest fires from slash-and-burn deforestation cause respiratory crises affecting millions yearly.</p></div>
+        <div class="effect-card"><div class="eff-icon">🧪</div><h4>Medicine Loss</h4><p>25% of modern medicines originate from rainforest plants — deforestation destroys tomorrow's pharmacy.</p></div>
+        <div class="effect-card"><div class="eff-icon">🧠</div><h4>Mental Health</h4><p>Loss of green spaces increases anxiety, depression, and stress disorders by up to 50%.</p></div>
+        <div class="effect-card"><div class="eff-icon">💊</div><h4>Malaria Spread</h4><p>Deforestation increases malaria risk by 50% as mosquitoes thrive in degraded land puddles.</p></div>
+        <div class="effect-card"><div class="eff-icon">🌬️</div><h4>Heat Islands</h4><p>Urban deforestation causes 3–5°C temperature rise, straining human health and productivity.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="india-map" class="section-light">
+  <div class="container">
+    <div class="section-badge">🗺️ India's Forest Landscape</div>
+    <h2 class="section-title">India: Forest Cover &amp; Deforestation Map</h2>
+    <p class="section-sub">Color-coded by forest density and deforestation intensity — FSI Report 2024–25</p>
+    <div class="map-legend-row">
+      <div class="legend-item"><span class="legend-dot" style="background:#1a5c1a"></span>Dense Forest (&gt;67%)</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#2e8b2e"></span>Moderate (40–67%)</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#5cb85c"></span>Open Forest (10–40%)</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#f5a623"></span>Low Forest (&lt;10%)</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#d9534f"></span>High Deforestation</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#8b4513"></span>Degraded Land</div>
+    </div>
+    <!-- MAP PLACEHOLDER — 19cm x 30cm — Insert your own map here -->
+    <div class="india-map-placeholder" id="india-map-container">
+      <div class="map-placeholder-inner">
+        <img src="deforestation-map-of-India.png" alt="deforestation map of India.png">
+      </div>
+    </div>
+    <div class="state-forest-table">
+      <h3>State-wise Forest Cover — FSI 2024–25</h3>
+      <div class="table-wrapper">
+        <table><thead><tr><th>State</th><th>Forest Cover (km²)</th><th>% of State</th><th>Change 2020–25</th><th>Status</th></tr></thead>
+        <tbody id="stateTableBody"></tbody></table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="india-stats" class="section-dark">
+  <div class="container">
+    <div class="section-badge">📊 Statistics</div>
+    <h2 class="section-title">India's Deforestation Statistics (2025)</h2>
+    <div class="chart-row">
+      <div class="chart-box"><h3>Top 10 States — Forest Loss (km², 2020–2025)</h3><canvas id="deforestBarChart"></canvas></div>
+      <div class="chart-box"><h3>India Forest Cover Distribution (2025)</h3><canvas id="forestPieChart"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<section id="affected-states" class="section-light">
+  <div class="container">
+    <div class="section-badge">🚨 Crisis Zones</div>
+    <h2 class="section-title">States Most Affected by Deforestation</h2>
+    <p class="section-sub">Based on FSI Annual Report 2024–25 and satellite data</p>
+    <div class="affected-grid" id="affectedStatesGrid"></div>
+    <div class="punjab-focus">
+      <div class="punjab-header"><span class="state-flag">🏵️</span><h3>Punjab: Special Focus</h3></div>
+      <div class="punjab-stats-row">
+        <div class="ps"><div class="ps-val">3.67%</div><div class="ps-lbl">Forest Cover</div></div>
+        <div class="ps"><div class="ps-val">3,613</div><div class="ps-lbl">Total Forest km²</div></div>
+        <div class="ps"><div class="ps-val">-142 km²</div><div class="ps-lbl">Net Change 2020–25</div></div>
+        <div class="ps"><div class="ps-val">High</div><div class="ps-lbl">Agricultural Pressure</div></div>
+      </div>
+      <div class="punjab-desc">
+        <p><strong>Key Issues:</strong> Punjab faces intense deforestation pressure due to agricultural expansion, urban sprawl around Ludhiana and Amritsar, and stubble burning that degrades forest cover.</p>
+        <p><strong>Punjab Legal Action:</strong> Under Punjab Land Preservation Act, cutting trees without permit = fine of <strong>₹50,000 per tree</strong> + up to <strong>3 years imprisonment</strong>.</p>
+        <p><strong>BDO Sapling Distribution:</strong> All BDOs in Punjab distribute free saplings between <strong>March–June</strong>. Visit your local BDO with Aadhaar card for free Desi Kikkar, Shisham, and Peepal saplings.</p>
+      </div>
+    </div>
+
+    <!-- West Bengal Special Focus -->
+    <div class="wb-focus state-focus-card">
+      <div class="punjab-header"><span class="state-flag">🌊</span><h3>West Bengal: Special Focus</h3></div>
+      <div class="punjab-stats-row">
+        <div class="ps"><div class="ps-val">18.9%</div><div class="ps-lbl">Forest Cover</div></div>
+        <div class="ps"><div class="ps-val">16,847</div><div class="ps-lbl">Total Forest km²</div></div>
+        <div class="ps"><div class="ps-val">-186 km²</div><div class="ps-lbl">Net Change 2020–25</div></div>
+        <div class="ps"><div class="ps-val">Critical</div><div class="ps-lbl">Sundarbans Threat</div></div>
+      </div>
+      <div class="punjab-desc">
+        <p><strong>Key Issues:</strong> West Bengal faces a twin crisis — coal mining and industrial expansion in the Paschim Bardhaman and Jharkhand border districts destroy inland forests, while rising sea levels and cyclones (Amphan, Yaas) devastate the <strong>Sundarbans mangrove ecosystem</strong> — the world's largest mangrove delta and a UNESCO World Heritage Site.</p>
+        <p><strong>Sundarbans Alert:</strong> The Sundarbans has lost over <strong>124 km² of mangrove cover</strong> since 2000. Each cyclone erodes thousands of hectares. The Bengal tiger population of ~100 individuals is directly threatened by forest loss.</p>
+        <p><strong>West Bengal Legal Action:</strong> Under the West Bengal Forest Act and Sundarbans Special Zone regulations, illegal tree cutting attracts fines of <strong>₹20,000–₹2 lakh per tree</strong> and up to <strong>5 years imprisonment</strong>. The Sundarbans Development Board enforces zero-tolerance buffer zones.</p>
+        <p><strong>BDO Sapling Distribution:</strong> West Bengal's <strong>Van Mahotsav programme</strong> distributes free Sal, Teak, Bamboo, Mahua, and Neem saplings via all BDO offices during July–August. In Sundarbans blocks, mangrove propagules (Sundari, Goran, Keora) are also distributed for coastal plantation.</p>
+        <p><strong>State Initiatives:</strong> <em>Sabuj Sathi Van Mahotsav</em> plants 1 crore trees annually. The MGNREGA-Forest linkage employs tribal communities in Jangalmahal for reforestation. The Sundarbans Tiger Reserve Eco-Development Committee funds community-led mangrove restoration.</p>
+      </div>
+      <div class="wb-species-row">
+        <div class="wb-sp"><span>🐯</span><strong>Royal Bengal Tiger</strong><small>~100 in Sundarbans</small></div>
+        <div class="wb-sp"><span>🐊</span><strong>Saltwater Crocodile</strong><small>Habitat threatened</small></div>
+        <div class="wb-sp"><span>🦌</span><strong>Spotted Deer</strong><small>Population declining</small></div>
+        <div class="wb-sp"><span>🌿</span><strong>Sundari Tree</strong><small>State-endemic species</small></div>
+      </div>
+    </div>
+    <div class="penalties-section">
+      <h3>⚖️ State-wise Penalties for Illegal Tree Cutting (2024–25)</h3>
+      <div class="table-wrapper">
+        <table class="penalties-table">
+          <thead><tr><th>State</th><th>Fine Per Tree</th><th>Imprisonment</th><th>Special Provisions</th></tr></thead>
+          <tbody id="penaltiesTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="live-counter" class="section-dark counter-section">
+  <div class="container">
+    <div class="section-badge">⏱️ Real-Time Data</div>
+    <h2 class="section-title">Live Global Forest Statistics</h2>
+    <p class="section-sub">Updating based on 2025 global average rates</p>
+    <div class="counter-grid">
+      <div class="counter-card trees-lost"><div class="counter-icon">🪵</div><div class="counter-value" id="treesLost">0</div><div class="counter-label">Trees Cut This Year</div><div class="counter-rate">~47,500 per minute</div></div>
+      <div class="counter-card trees-planted"><div class="counter-icon">🌱</div><div class="counter-value" id="treesPlanted">0</div><div class="counter-label">Trees Planted This Year</div><div class="counter-rate">~8,500 per minute</div></div>
+      <div class="counter-card co2-released"><div class="counter-icon">☁️</div><div class="counter-value" id="co2Released">0</div><div class="counter-label">Extra CO₂ Released (tonnes)</div><div class="counter-rate">~3.8 billion tonnes/year</div></div>
+      <div class="counter-card hectares-lost"><div class="counter-icon">🌲</div><div class="counter-value" id="hectaresLost">0</div><div class="counter-label">Hectares Lost This Year</div><div class="counter-rate">~8.9 hectares per minute</div></div>
+    </div>
+    <div class="year-progress">
+      <div class="year-label">Year Progress 2025 — <span id="yearPercent">0%</span></div>
+      <div class="year-bar-outer"><div class="year-bar-inner" id="yearBar"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="awareness" class="section-light">
+  <div class="container">
+    <div class="section-badge">💡 Take Action</div>
+    <h2 class="section-title">How You Can Stop Deforestation</h2>
+    <div class="awareness-grid" id="awarenessGrid"></div>
+  </div>
+</section>
+
+<section id="govt-schemes" class="section-dark">
+  <div class="container">
+    <div class="section-badge">🏛️ Government Action</div>
+    <h2 class="section-title">Key Government Initiatives &amp; Schemes</h2>
+    <p class="section-sub">Click any scheme to visit its official government portal</p>
+    <h3 class="subsection-title">🌿 National Forest Schemes — India</h3>
+    <div class="schemes-grid" id="schemesGrid"></div>
+    <h3 class="subsection-title" style="margin-top:3rem;">🌳 BDO Sapling Distribution Programme</h3>
+    <div class="bdo-info">
+      <p>Every <strong>Block Development Office (BDO)</strong> across India distributes <em>free saplings</em> to residents during plantation season (July–September). Bring your Aadhaar card to claim native species saplings.</p>
+      <div class="bdo-grid">
+        <div class="bdo-card"><strong>📍 Punjab</strong><p>Paudha Lagao Paudha Bachao — free Shisham, Neem, Peepal</p></div>
+        <div class="bdo-card"><strong>📍 West Bengal</strong><p>WB Greening Programme — free Sal, Teak, Bamboo, Mahua saplings via BDOs during Van Mahotsav</p></div>
+        <div class="bdo-card"><strong>📍 Uttar Pradesh</strong><p>125 crore sapling drive via district BDO offices</p></div>
+        <div class="bdo-card"><strong>📍 Madhya Pradesh</strong><p>Ek Ped Maa Ke Naam — 5 crore saplings via BDOs annually</p></div>
+        <div class="bdo-card"><strong>📍 Maharashtra</strong><p>Majhi Vasundhara — bamboo and native forest species via BDOs</p></div>
+        <div class="bdo-card"><strong>📍 West Bengal</strong><p>State Afforestation Programme — seedlings in every block</p></div>
+        <div class="bdo-card"><strong>📍 Karnataka</strong><p>Haritha Karnataka — 5 crore trees; BDO distribution</p></div>
+      </div>
+    </div>
+    <h3 class="subsection-title" style="margin-top:3rem;">⚖️ Legal Framework: Tree Protection in India</h3>
+    <div class="legal-grid">
+      <div class="legal-card red-border"><div class="legal-icon">💰</div><h4>Fine</h4><p>₹5,000 to ₹10 lakh per tree depending on species and state law</p></div>
+      <div class="legal-card orange-border"><div class="legal-icon">⛓️</div><h4>Imprisonment</h4><p>6 months to 7 years for cutting protected species in reserved forests</p></div>
+      <div class="legal-card yellow-border"><div class="legal-icon">🚗</div><h4>Seizure</h4><p>Vehicles, equipment, and timber used in illegal logging are seized</p></div>
+      <div class="legal-card green-border"><div class="legal-icon">🌳</div><h4>Compensatory Planting</h4><p>10:1 compensatory afforestation mandatory for any permitted tree removal</p></div>
+    </div>
+    <p class="report-line">🚨 Report illegal tree cutting: <strong>MoEFCC Helpline 1800-11-4678</strong> | <a href="https://greenmission.nic.in" target="_blank">greenmission.nic.in</a></p>
+  </div>
+</section>
+
+<section id="un-goals" class="section-light">
+  <div class="container">
+    <div class="section-badge">🌐 United Nations</div>
+    <h2 class="section-title">6 Global Forest Goals — United Nations</h2>
+    <p class="section-sub">United Nations Strategic Plan for Forests 2017–2030 (UNSPF)</p>
+    <div class="un-goals-grid">
+      <div class="un-goal-card"><div class="un-goal-num">01</div><div class="un-goal-icon">🛑</div><h3>Reverse Forest Loss</h3><p>Reverse the loss of forest cover through sustainable management, protection, restoration, afforestation, and reforestation.</p><div class="un-target">Target: +3% global forest area by 2030</div></div>
+      <div class="un-goal-card"><div class="un-goal-num">02</div><div class="un-goal-icon">💚</div><h3>Enhance Forest Benefits</h3><p>Enhance forest-based economic, social, and environmental benefits including improved livelihoods of forest-dependent people.</p><div class="un-target">Target: Double sustainable forest management finance</div></div>
+      <div class="un-goal-card"><div class="un-goal-num">03</div><div class="un-goal-icon">🛡️</div><h3>Protect Forests</h3><p>Increase the area of protected forests and proportion of products from sustainably managed sources.</p><div class="un-target">Target: 30% of global forests protected by 2030</div></div>
+      <div class="un-goal-card"><div class="un-goal-num">04</div><div class="un-goal-icon">💵</div><h3>Mobilise Financing</h3><p>Mobilise significantly increased new and additional financial resources for sustainable forest management.</p><div class="un-target">Target: $100 billion annually for forest finance</div></div>
+      <div class="un-goal-card"><div class="un-goal-num">05</div><div class="un-goal-icon">🤝</div><h3>Promote Governance</h3><p>Promote robust forest governance frameworks and strengthen national coordination mechanisms.</p><div class="un-target">Target: National forest programmes in 120+ countries</div></div>
+      <div class="un-goal-card"><div class="un-goal-num">06</div><div class="un-goal-icon">🔬</div><h3>Enhance Knowledge</h3><p>Strengthen science-policy interfaces, education, cooperation, and monitoring systems globally.</p><div class="un-target">Target: Universal forest monitoring systems by 2030</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="game" class="section-dark">
+  <div class="container">
+    <div class="section-badge">🎮 Interactive Learning</div>
+    <h2 class="section-title">Tree Plantation Challenge</h2>
+    <p class="section-sub">Click empty plots to plant trees! Stop lumberjacks! Save your forest in 60 seconds!</p>
+    <div class="game-container">
+      <div class="game-stats-bar">
+        <div class="g-stat"><span class="g-label">🌳 Trees</span><span id="gameTrees">0</span></div>
+        <div class="g-stat"><span class="g-label">⭐ Score</span><span id="gameScore">0</span></div>
+        <div class="g-stat"><span class="g-label">💚 Health</span><span id="gameHealth">100%</span></div>
+        <div class="g-stat"><span class="g-label">⏱️ Time</span><span id="gameTimer">60</span>s</div>
+        <div class="g-stat"><span class="g-label">🏅 Level</span><span id="gameLevel">1</span></div>
+      </div>
+      <div class="game-board" id="gameBoard"></div>
+      <div class="game-controls">
+        <button class="game-btn" id="startGameBtn">🌱 Start Game</button>
+        <button class="game-btn secondary" id="resetGameBtn">🔄 Reset</button>
+      </div>
+      <div class="game-message" id="gameMessage">Press Start to begin planting trees! 🌿</div>
+      <div class="game-legend">
+        <span>🌱 Empty — click to plant</span>
+        <span>🌳 Tree grown</span>
+        <span>🪓 Lumberjack — click to stop!</span>
+        <span>🔥 Fire — act fast!</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificate" class="section-light">
+  <div class="container">
+    <div class="section-badge">🏆 Recognition System</div>
+    <h2 class="section-title">Tree Planter Certificate</h2>
+    <p class="section-sub">Plant trees and earn your official Greenomics certificate — 6 premium tiers!</p>
+    <div class="cert-tiers">
+      <div class="tier-card bronze"><div class="tier-icon">🥉</div><strong>Bronze</strong><p>5+ Trees</p></div>
+      <div class="tier-card silver"><div class="tier-icon">🥈</div><strong>Silver</strong><p>30+ Trees</p></div>
+      <div class="tier-card gold"><div class="tier-icon">🥇</div><strong>Gold</strong><p>50+ Trees</p></div>
+      <div class="tier-card platinum"><div class="tier-icon">💎</div><strong>Diamond</strong><p>70+ Trees</p></div>
+      <div class="tier-card diamond"><div class="tier-icon">💠</div><strong>Platinum</strong><p>85+ Trees</p></div>
+      <div class="tier-card legend"><div class="tier-icon">👑</div><strong>Legend</strong><p>100+ Trees</p></div>
+    </div>
+    <div class="cert-form-wrapper">
+      <div class="cert-form">
+        <h3>Enter Your Details</h3>
+        <div class="form-row">
+          <div class="form-group"><label>Full Name *</label><input type="text" id="certName" placeholder="Your full name"/></div>
+          <div class="form-group"><label>Age *</label><input type="number" id="certAge" placeholder="Your age" min="5" max="100"/></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Gender *</label>
+            <select id="certGender">
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Non-binary">Non-binary</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Trees Planted *</label><input type="number" id="certTrees" placeholder="Minimum 5" min="5"/></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Date of Planting *</label><input type="date" id="certDate"/></div>
+          <div class="form-group"><label>State / Region</label><input type="text" id="certState" placeholder="Your state or city"/></div>
+        </div>
+        <button class="cta-btn primary-btn" id="generateCertBtn">Generate Certificate 🏆</button>
+      </div>
+    </div>
+    <!-- CERTIFICATE DOCUMENT -->
+    <div class="cert-preview-wrapper" id="certPreviewWrapper" style="display:none;">
+      <h3 style="text-align:center;margin-bottom:1.5rem;color:#2d5a27;">✅ Your Certificate is Ready!</h3>
+      <div id="certificateDocument" class="certificate-document">
+        <div class="cert-corner tl"></div>
+        <div class="cert-corner tr"></div>
+        <div class="cert-corner bl"></div>
+        <div class="cert-corner br"></div>
+        <div class="cert-header-section">
+          <div class="cert-medal" id="certMedalIcon">🥉</div>
+          <div class="cert-org-name">GREENOMICS · LPU · INDIA</div>
+        </div>
+        <div class="cert-title-block">
+          <div class="cert-big-title">CERTIFICATE</div>
+          <div class="cert-subtitle" id="certSubtitle">OF BRONZE ACHIEVEMENT</div>
+          <div class="cert-title-line"></div>
+        </div>
+        <div class="cert-body-section">
+          <div class="cert-presents-text">This certificate is proudly presented to</div>
+          <div class="cert-recipient-name" id="certRecipientName">[ Your Name ]</div>
+          <div class="cert-name-underline"></div>
+          <div class="cert-meta-line" id="certMetaLine">Age: — · Gender: — · Location: —</div>
+          <div class="cert-recognition-box">
+            <div class="cert-recognition-label">In recognition of planting</div>
+            <div class="cert-tree-count" id="certTreeCount">0 Trees</div>
+            <div class="cert-planted-date" id="certPlantedDate">Planted on —</div>
+          </div>
+          <div class="cert-contribution-text">for outstanding contribution to environmental conservation and afforestation in India.</div>
+        </div>
+        <div class="cert-footer-section">
+          <div class="cert-footer-left">
+            <div class="cert-issue-label">ISSUE DATE</div>
+            <div class="cert-issue-date" id="certIssueDate">—</div>
+            <div class="cert-cred-label-sm">Credential ID</div>
+            <div class="cert-cred-id" id="certCredId">—</div>
+          </div>
+          <div class="cert-footer-center">
+            <div id="certQRCode" class="cert-qr-block"></div>
+            <div class="cert-qr-caption">🔐 Scan to Verify</div>
+          </div>
+          <div class="cert-footer-right">
+            <div class="cert-sig-script" id="certSigScript">VanRaksha</div>
+            <div class="cert-sig-underline"></div>
+            <!-- <div class="cert-sig-name">Soumik Pal</div> -->
+            <div class="cert-sig-title">CHAIRPERSON, VANRAKSHA</div>
+            <div class="cert-sig-org">School of CSE, LPU</div>
+          </div>
+        </div>
+      </div>
+      <div class="cert-download-btns">
+        <button class="cert-dl-btn png-btn" id="downloadPngBtn">⬇️ Download PNG</button>
+        <button class="cert-dl-btn pdf-btn" id="downloadPdfBtn">📄 Download PDF</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="project" class="section-dark">
+  <div class="container">
+    <div class="section-badge">🎓 About the Project</div>
+    <h2 class="section-title">About Greenomics</h2>
+    <div class="project-card">
+      <p class="project-intro">This website was developed as part of the <strong>Environmental Studies (EVS)</strong> coursework at <strong>Lovely Professional University (LPU)</strong>. Our goal is to use digital media to highlight the critical intersection of <em>ecology and economy</em>.</p>
+      <div class="project-team-grid">
+        <div class="team-col"><h4>👨‍💻 Developed By</h4><ul><li><strong>Soumik Pal</strong> — CSE 1st Year (DS-ML)</li><li>Chandan Kumar</li><li>Sahib Singh</li></ul></div>
+        <div class="team-col"><h4>🏫 LPU Resources</h4><ul><li>School of Computer Science</li><li>Dept. of Environmental Studies</li><li>Community Service Cell</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="leaf-icon">🌿</span><span class="brand-text">Greenomics</span></div>
+    <p class="footer-tagline">Protecting Forests. Powering Economies. Inspiring Change.</p>
+    <div class="social-icons">
+      <a href="https://github.com/Soumik633" target="_blank" class="social-link github" title="GitHub">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/soumikpal-data" target="_blank" class="social-link linkedin" title="LinkedIn">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="mailto:soumikpal633@gmail.com" target="_blank" class="social-link instagram" title="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+      </svg>      </a>
+    </div>
+    <div class="footer-links">
+      <a href="#hero">Home</a><a href="#about">About</a><a href="#india-map">Map</a><a href="#certificate">Certificate</a><a href="#project">Project</a>
+    </div>
+    <div class="footer-copy">© 2026 Greenomics. All Rights Reserved. | Developed at LPU · School of CSE</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
